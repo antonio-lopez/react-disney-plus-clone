@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+<h1 align="center">Welcome to Disney+ Clone 👋</h1>
+<p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A React Disney+ clone using Firebase and Redux. Firebase is used for handling a user's authentication and movie storage. Redux is used for handling a user and movie state.
 
-## Available Scripts
+### 🏠 [Homepage](https://antonio-disneyplus-clone.netlify.app)
 
-In the project directory, you can run:
+![screenshot]()
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Before you begin, ensure you have met the following requirements:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Create a Firebase project and get your project's [unique configuration object](https://firebase.google.com/docs/web/setup). Save the `firebaseConfig` object for later use. The format should be look like this.
+  ```
+  var firebaseConfig = {
+  apiKey: "API_KEY",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  databaseURL: "https://PROJECT_ID.firebaseio.com",
+  projectId: "PROJECT_ID",
+  storageBucket: "PROJECT_ID.appspot.com",
+  messagingSenderId: "SENDER_ID",
+  appId: "APP_ID",
+  measurementId: "G-MEASUREMENT_ID",
+  };
+  ```
+- Create a Firestore Database. Start a new collection and name it `movies`. Add 16 new documents. Each new document should have an `Auto-ID` and have the following fields `[backgroundImg, cardImg, description, subTitle, title, titleImg, type]`, all of type `string`. Fill in the `values` with the values given in the `disneyplusMovies.json` file located in the `src` directory.
+- Enable authentication using Google Sign In. Go to your projects `Athentication` tab, select `Sign-in Method`, and `enable` Google.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Google sign in / sign out
+- Firebase database fetching
+- Redux state management
 
-### `npm run build`
+## Install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone respository: `https://github.com/antonio-lopez/react-disney-plus-clone.git`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd react-disney-plus-clone/
+npm install
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Create a `.env` file in the root `react-disney-plus-clone` directory and add the following.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTHDOMAIN=
+REACT_APP_FIREBASE_PROJECT_ID=
+REACT_APP_FIREBASE_STORAGEBUCKET=
+REACT_APP_FIREBASE_MSSGINGSENDER_ID=
+REACT_APP_FIREBASE_APP_ID=
+REACT_APP_FIREBASE_MEASUREMENT_ID=
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+Fill in the values with your Firebase project's config values.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+cd react-disney-plus-clone/
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+👤 **Antonio Lopez**
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website: [Antonio Lopez](https://www.antoniolopez.me/)
+- Github: [@antonio-lopez](https://github.com/antonio-lopez)
