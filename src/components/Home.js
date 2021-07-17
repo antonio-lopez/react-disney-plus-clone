@@ -14,13 +14,17 @@ import { selectUserName } from '../features/user/userSlice';
 const Home = () => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
-  let recommends = [];
-  let newDisneys = [];
-  let originals = [];
-  let trending = [];
+  // let recommends = [];
+  // let newDisneys = [];
+  // let originals = [];
+  // let trending = [];
 
   useEffect(() => {
-    // console.log('hello');
+    let recommends = [];
+    let newDisneys = [];
+    let originals = [];
+    let trending = [];
+
     db.collection('movies').onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
         // console.log(recommends);
@@ -40,6 +44,8 @@ const Home = () => {
           case 'trending':
             trending = [...trending, { id: doc.id, ...doc.data() }];
             break;
+          default:
+            break;
         }
       });
 
@@ -52,7 +58,7 @@ const Home = () => {
         })
       );
     });
-  }, [userName]);
+  }, [userName, dispatch]);
 
   return (
     <Container>
