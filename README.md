@@ -6,7 +6,7 @@
 
 ### 🏠 [Homepage](https://antonio-disneyplus-clone.netlify.app)
 
-![screenshot](https://raw.githubusercontent.com/antonio-lopez/react-disney-plus-clone/master/uploads/disneyplus-clone-screenshot.png?token=AIWOL57XFTCNR5IDLQQNSN3A7REPS)
+![screenshot](/uploads/disneyplus-clone-screenshot.png?raw=true)
 
 ## Prerequisites
 
